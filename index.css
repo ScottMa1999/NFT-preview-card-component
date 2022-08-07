@@ -1,0 +1,153 @@
+/* Mobile max-width: 375px
+   Desktop min-width: 1440px
+   */
+
+/* Soft blue: hsl(215, 51%, 70%)
+- Cyan: hsl(178, 100%, 50%)
+- Very dark blue (main BG): hsl(217, 54%, 11%)
+- Very dark blue (card BG): hsl(216, 50%, 16%)
+- Very dark blue (line): hsl(215, 32%, 27%)
+- White: hsl(0, 0%, 100%)
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+/* font-family: 'Outfit', sans-serif; */
+/* font-weight: 300, 400, 600 */
+
+.attribution { 
+  font-size: 13px; 
+  margin-top: 1rem;
+  color: white;
+  text-align: center;
+}
+
+.attribution a { 
+  color: hsl(228, 45%, 44%); 
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 18px;
+  /* flex: body & attribution stack on each other */
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(217, 54%, 11%);
+  min-width: 375px;
+  max-width: 1440px;
+}
+
+.container {
+  background-color: hsl(216, 50%, 16%);
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+  margin-bottom: 0;
+  max-width: 375px;
+}
+
+article {
+  padding: 2rem;
+}
+
+article:nth-child(2) {
+  padding-top: 0;
+  margin-top: -2rem;
+  padding-bottom: 0;
+}
+
+h1 {
+  color: white;
+  font-family:'Outfit', sans-serif;
+  font-weight: 600;
+}
+
+article:nth-child(2) p {
+  color:hsl(215, 51%, 70%);
+  font-family:'Outfit', sans-serif;
+  font-weight: 300;
+  margin-bottom: 0;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+  float:left;
+  font-family:'Outfit', sans-serif;
+  font-weight: 300;
+  width: 100%;
+}
+
+ul li:first-child {
+  float: left;
+  color: hsl(178, 100%, 50%);
+  font-family:'Outfit', sans-serif;
+  font-weight:600;
+}
+
+ul img {
+  margin-right: 0.3rem;
+  margin-bottom: -0.1rem;
+}
+
+ul li:last-child {
+  float: right;
+  color:hsl(215, 51%, 70%);
+  font-family:'Outfit', sans-serif;
+  font-weight: 300;
+}
+
+ul li:last-child::after {
+  content:"";
+  clear:both;
+  display: table;
+}
+
+hr {
+  width: 100%;
+  height: 0.1rem;
+  background-color: hsl(215, 51%, 70%);
+  border: none;
+
+}
+
+article:last-child {
+  padding-top: 1rem;
+}
+
+article:last-child img {
+  width:2rem;
+  border:1px solid white;
+  border-radius: 50%;
+  float: left;
+  margin-right: 2rem;
+}
+
+article:last-child p {
+  color:hsl(215, 51%, 70%);
+  font-family:'Outfit', sans-serif;
+  font-weight: 300;
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+article:last-child span {
+  color: white;
+}
+
+article:last-child::after {
+  content:"";
+  clear:both;
+  display:table;
+}
+
+img {
+  max-width: 100%;
+  border-radius: 1rem;
+  justify-content: center;
+  align-items: center;
+}
