@@ -14,17 +14,6 @@
 /* font-family: 'Outfit', sans-serif; */
 /* font-weight: 300, 400, 600 */
 
-.attribution { 
-  font-size: 13px; 
-  margin-top: 1rem;
-  color: white;
-  text-align: center;
-}
-
-.attribution a { 
-  color: hsl(228, 45%, 44%); 
-}
-
 * {
   box-sizing: border-box;
 }
@@ -39,6 +28,17 @@ body {
   background-color: hsl(217, 54%, 11%);
   min-width: 375px;
   max-width: 1440px;
+}
+
+.attribution { 
+  font-size: 13px; 
+  margin-top: 1rem;
+  color: white;
+  text-align: center;
+}
+
+.attribution a { 
+  color: hsl(228, 45%, 44%); 
 }
 
 .container {
@@ -60,10 +60,44 @@ article:nth-child(2) {
   padding-bottom: 0;
 }
 
-h1 {
+h2 {
   color: white;
   font-family:'Outfit', sans-serif;
   font-weight: 600;
+}
+
+h2:hover {
+  color:cyan;
+  cursor:pointer;
+}
+
+.container article:first-child img {
+  position: relative;
+}
+
+.container article:first-child div {
+  position: absolute;
+  background-color: hsl(178, 100%, 50%, 50%);
+  width: 18.56%;
+  height: 33%;
+  top: 4.2%;
+  border-radius: 1rem;
+  z-index: 999;
+  opacity: 0;
+  transition: opacity 0.3s ease-in;
+}
+
+.container article:first-child div img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 12%;
+  transform: translate(-50%, -50%);
+}
+
+article:nth-child(1) div:hover {
+  cursor: pointer; 
+  opacity: 1;
 }
 
 article:nth-child(2) p {
@@ -76,78 +110,60 @@ article:nth-child(2) p {
 ul {
   list-style-type: none;
   padding-left: 0;
-  float:left;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   font-family:'Outfit', sans-serif;
   font-weight: 300;
-  width: 100%;
+  border-bottom: 1px solid hsl(215, 51%, 70%);
+  padding-bottom: 1rem;
+  color: hsl(215, 51%, 70%);
+}
+
+ul li {
+  display: flex;
+  align-items: center;
+}
+
+ul li img {
+  margin-right: 0.2rem;
 }
 
 ul li:first-child {
-  float: left;
-  color: hsl(178, 100%, 50%);
-  font-family:'Outfit', sans-serif;
-  font-weight:600;
-}
-
-ul img {
-  margin-right: 0.3rem;
-  margin-bottom: -0.1rem;
-}
-
-ul li:last-child {
-  float: right;
-  color:hsl(215, 51%, 70%);
-  font-family:'Outfit', sans-serif;
-  font-weight: 300;
-}
-
-ul li:last-child::after {
-  content:"";
-  clear:both;
-  display: table;
-}
-
-hr {
-  width: 100%;
-  height: 0.1rem;
-  background-color: hsl(215, 51%, 70%);
-  border: none;
-
+  color:hsl(178, 100%, 50%);
+  font-weight: 600;
 }
 
 article:last-child {
-  padding-top: 1rem;
-}
-
-article:last-child img {
-  width:2rem;
-  border:1px solid white;
-  border-radius: 50%;
-  float: left;
-  margin-right: 2rem;
-}
-
-article:last-child p {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  padding-top: 0;
   color:hsl(215, 51%, 70%);
   font-family:'Outfit', sans-serif;
   font-weight: 300;
-  width: 100%;
-  margin-top: 0.5rem;
+  font-size: 1rem;
 }
 
-article:last-child span {
+article:last-child img {
+  width: 2.5rem;
+  border: 1.5px solid white;
+  border-radius: 50%;
+  margin-right: 2rem;
+}
+
+article:last-child p span {
   color: white;
+  font-weight: 600;
 }
 
-article:last-child::after {
-  content:"";
-  clear:both;
-  display:table;
+article:last-child p span:hover {
+  color:cyan;
+  cursor: pointer;
 }
 
 img {
   max-width: 100%;
   border-radius: 1rem;
-  justify-content: center;
-  align-items: center;
 }
